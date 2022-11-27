@@ -4,9 +4,91 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Document</title>
 </head>
 <body>
-  
+  <h1>Checkout</h1>
+  <section id="products"> 
+    <article class="products__product"> 
+      <img src="./images/photo1.png">
+      <div class="product__data">
+        <div class="product__data-price">
+          <h3>Vintage Backbag</h3>
+          <h4>$54,99</h4>
+          <h5>$94.99</h5>
+        </div>
+        <div class="product__data-quantity">
+          <button>−</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </div>
+    </article>
+    <article class="products__product"> 
+      <img src="./images/photo2.png">
+      <div class="product__data">
+        <div class="product__data-price">
+          <h3>Levi Shoes</h3>
+          <h4>$74,99</h4>
+          <h5>$124.99</h5>
+        </div>
+        <div class="product__data-quantity">
+          <button>−</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </div>
+    </article>
+    <div class="products__bill">
+      <div class="bill">
+        <h2>Shipping</h2>
+        <h3>$19</h3>
+      </div>
+      <div class="bill">
+        <h2>Total</h2>
+        <h3>$148.98</h3>
+      </div>
+    </div>
+  </section>
+  <form id="form">
+    <div class="form__contact">
+      <h2>Contact information</h2>
+      <label for="email">E-mail</label>
+      <input type="text" id="email" placeholder="📨  Enter your email...">
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" placeholder="📞  Enter your phone...">
+    </div>
+    <div class="form__shipping">
+      <h2>Shipping address</h2>
+      <label for="name">Full name</label>
+      <input type="text" id="name" placeholder="Your name...">
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="🏠 Your address...">
+      <label for="city">City</label>
+      <input type="text" id="city" placeholder="Your city...">
+      <div>
+        <label for="country">Country</label>
+        <select id="country" placeholder="Your country..">
+        </select>
+        <label for="postal">Postal code</label>
+        <input type="text" id="postal" placeholder="Your postal code..">
+      </div>
+      <input type="checkbox" id="save">
+      <label for="save">Save this information for next time</label>
+    </div>
+    <button>Continue</button>
+  </form>
+  <footer id="footer">
+    <p class="footer">
+        created by
+        <span class="username">
+            <a href="https://devchallenges.io/portfolio/Anselmo1122" target="_blank">
+                Anselmo1122
+            </a>
+        </span>
+        - devChallenges.io
+    </p>
+  </footer>
 </body>
 </html>
