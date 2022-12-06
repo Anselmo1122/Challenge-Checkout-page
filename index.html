@@ -3,82 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="styles.css" />
   <title>Document</title>
 </head>
 <body>
   <h1>Checkout</h1>
-  <section id="products"> 
-    <article class="products__product"> 
-      <img src="./images/photo1.png">
-      <div class="product__data">
-        <div class="product__data-price">
-          <h3>Vintage Backbag</h3>
-          <h4>$54,99</h4>
-          <h5>$94.99</h5>
+  <div class="content">
+    <section id="products"> 
+      <article class="products__product"> 
+        <img src="./images/photo1.png">
+        <div class="product__data">
+          <div class="product__data-price">
+            <h3>Vintage Backbag</h3>
+            <h4>$54,99</h4>
+            <h5>$94.99</h5>
+          </div>
+          <div class="product__data-quantity">
+            <button>−</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
         </div>
-        <div class="product__data-quantity">
-          <button>−</button>
-          <span>1</span>
-          <button>+</button>
+      </article>
+      <article class="products__product"> 
+        <img src="./images/photo2.png">
+        <div class="product__data">
+          <div class="product__data-price">
+            <h3>Levi Shoes</h3>
+            <h4>$74,99</h4>
+            <h5>$124.99</h5>
+          </div>
+          <div class="product__data-quantity">
+            <button>−</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+        </div>
+      </article>
+      <div class="products__bill">
+        <div class="bill">
+          <h2>Shipping</h2>
+          <h3>$19</h3>
+        </div>
+        <div class="bill">
+          <h2>Total</h2>
+          <h3>$148.98</h3>
         </div>
       </div>
-    </article>
-    <article class="products__product"> 
-      <img src="./images/photo2.png">
-      <div class="product__data">
-        <div class="product__data-price">
-          <h3>Levi Shoes</h3>
-          <h4>$74,99</h4>
-          <h5>$124.99</h5>
-        </div>
-        <div class="product__data-quantity">
-          <button>−</button>
-          <span>1</span>
-          <button>+</button>
-        </div>
-      </div>
-    </article>
-    <div class="products__bill">
-      <div class="bill">
-        <h2>Shipping</h2>
-        <h3>$19</h3>
-      </div>
-      <div class="bill">
-        <h2>Total</h2>
-        <h3>$148.98</h3>
-      </div>
-    </div>
-  </section>
-  <form id="form">
-    <div class="form__contact">
+    </section>
+    <form id="form">
       <h2>Contact information</h2>
-      <label for="email">E-mail</label>
-      <input type="text" id="email" placeholder="📨  Enter your email...">
-      <label for="phone">Phone</label>
-      <input type="text" id="phone" placeholder="📞  Enter your phone...">
-    </div>
-    <div class="form__shipping">
+      <section class="form__contact">
+        <label for="email">E-mail</label>
+        <div class="input">
+          <span class="material-symbols-outlined">
+            mail
+          </span>
+          <input 
+            id="email"
+            type="email" 
+            required
+            autocomplete="off"
+            placeholder="Enter your email..."
+          >
+        </div>
+        <label for="phone">Phone</label>
+        <div class="input">
+          <span class="material-symbols-outlined">
+            call
+          </span>
+          <input 
+            id="phone"
+            type="phone" 
+            required
+            autocomplete="off"
+            placeholder="Enter your phone..."
+          >
+        </div>
+      </section>
       <h2>Shipping address</h2>
-      <label for="name">Full name</label>
-      <input type="text" id="name" placeholder="Your name...">
-      <label for="address">Address</label>
-      <input type="text" id="address" placeholder="🏠 Your address...">
-      <label for="city">City</label>
-      <input type="text" id="city" placeholder="Your city...">
-      <div>
-        <label for="country">Country</label>
-        <select id="country" placeholder="Your country..">
-        </select>
-        <label for="postal">Postal code</label>
-        <input type="text" id="postal" placeholder="Your postal code..">
-      </div>
-      <input type="checkbox" id="save">
-      <label for="save">Save this information for next time</label>
-    </div>
-    <button>Continue</button>
-  </form>
+      <section class="form__contact">
+        <label for="name">Full name</label>
+        <div class="input">
+          <span class="material-symbols-outlined">
+            account_circle
+          </span>
+          <input 
+            id="name"
+            type="text" 
+            required
+            autocomplete="off"
+            placeholder="Your name..."
+            value="Rodney Cotton"
+          >
+        </div>
+        <label for="address">Address</label>
+        <div class="input">
+          <span class="material-symbols-outlined">
+            home
+          </span>
+          <input 
+            id="address"
+            type="text" 
+            required
+            autocomplete="off"
+            placeholder="Your address..."
+          >
+        </div>
+        <label for="city">City</label>
+        <div class="input">
+          <span class="material-symbols-outlined">
+            location_city
+          </span>
+          <input 
+            id="city"
+            type="text" 
+            required
+            autocomplete="off"
+            placeholder="Your city..."
+          >
+        </div>
+        <!--------------------------------------------- -->
+        <div class="input-inline">
+          <div class="input-inline__item">
+            <label for="country">Country</label>
+            <span class="material-symbols-outlined">
+              location_city
+            </span>
+            <select id="country" value="Venezuela">
+              <option value="Venezuela">Venezuela</option>
+              <option value="Germany">Germany</option>
+              <option value="Spain">Spain</option>
+            </select>
+          </div>
+        <!--------------------------------------------- -->
+          <div class="input-inline__item">
+            <label for="postal">Postal code</label>
+            <span class="material-symbols-outlined">
+              markunread_mailbox
+            </span>
+            <input id="postal" type="text" placeholder="Your postal code..." required>
+          </div>
+        </div>
+        <!--------------------------------------------- -->
+        <br/>
+        <div class="input-3">
+          <input type="checkbox" id="check">
+          <label for="check">Save this information for next time</label>
+        </div>
+      </section>
+      <button>Continue</button>
+    </form>
+  </div>
   <footer id="footer">
     <p class="footer">
         created by

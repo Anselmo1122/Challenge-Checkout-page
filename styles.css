@@ -9,7 +9,7 @@
 }
 
 body {
-    padding: 1rem;
+    padding: .7rem;
 }
 
 :root {
@@ -21,18 +21,19 @@ body {
 
 h1 {
     margin: 2rem 0;
+    font-size: calc(1rem + 2vw);
 }
 
 /* Styles for section product */
 #products {
-    max-width: 450px;
+    max-width: 400px;
     padding: 1.9rem;
     background: var(--color-grey-1);
     border-radius: 17px;
 }
 .products__product {
     max-width: 90%;
-    height: 156px;
+    height: 130px;
     margin-bottom: 2rem;
     width: 100%;
     display: flex;
@@ -62,15 +63,16 @@ h1 {
     margin-right: .6rem;
 }
 .product__data-price h4 {
-    font-size: 1.2rem;
+    font-size: .9rem;
     color: #F2994A;
 }
 .product__data-price h5 {
+    font-size: .8rem;
     text-decoration: line-through;
 }
 .product__data-quantity {
-    min-width: 110px;
-    padding: 1rem .8rem;
+    min-width: 140px;
+    padding: .8rem .8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,17 +82,17 @@ h1 {
 }
 .product__data-quantity button {
     padding: 0 .6rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border: none;
     border-radius: 10px;
     background: #dddddd;
 }
 .product__data-quantity span {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .products__bill {
-    margin-top: 8rem;
+    margin-top: 7rem;
 } 
 .bill {
     display: flex;
@@ -105,22 +107,113 @@ h1 {
 }
 
 /* Styles for section form */
-#form {
-    margin-top: 2rem;
+#form h2 {
+    margin-top: 3.5rem;
+    padding: .7rem 0;
+    font-size: 1.2rem;
 }
-.form__contact input,
-.form__shipping input,
-.form__shipping select {
+.form__contact label {
+    font-size: .8rem;
+}
+.form__contact .input {
+    margin: .4rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__contact .input input {
+    padding: .9rem;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    border: 1px solid var(--color-grey-2);
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}
+.form__contact .input span {
+    font-size: 1.2rem;
+    padding: .8rem 0 .8rem .65rem;
+    color: var(--color-grey-2);
+    border: 1px solid var(--color-grey-2);
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+.form__contact .input-inline__container {
     width: 100%;
-    margin-bottom: .9rem;
-    padding: .5rem;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.input-inline {
+    width: 40%;
+}
+.form__contact .input-inline .input {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.input-inline {
+    margin-top: 2.4rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+.input-inline__item {
+    width: 50%;
+    display: inline-flex;
+    position: relative;
+}
+.input-inline__item span {
+    font-size: 1.2rem;
+    padding: .8rem 0 .8rem .65rem;
+    color: var(--color-grey-2);
+    border: 1px solid var(--color-grey-2);
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+.input-inline__item select, 
+.input-inline__item input {
+    width: 80%;
+    padding: .9rem;
+    border: none;
+    outline: none;
+    border: 1px solid var(--color-grey-2);
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}
+.input-inline__item label {
+    position: absolute;
+    top: -1.3rem;
+}
+
+.form__contact #check {
+    transform: scale(1.5);
+    margin-right: .8rem;
+}
+.input-3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#form button {
+    margin-top: 2rem;
+    float: right;
+    padding: 1.1rem 3rem;
+    font-size: 1rem;
+    color: #ffffff;
+    border: none;
     border-radius: 12px;
+    background: #F2994A;
+    cursor: pointer;
+}
+#form button:hover {
+    background: #e18839;
 }
 
 /* Styles for section footer */
 .footer {
-    margin: 5rem 0 1rem 0;
+    margin: 11rem 0 1rem 0;
     text-align: center;
     font: normal 400 0.8rem var(--font);
     color: var(--color-grey-2);
@@ -128,4 +221,27 @@ h1 {
 .username a {
     font-weight: 700;
     color: var(--color-grey-2);
+}
+
+/* Media Queries */
+@media screen and (min-width:768px) {
+    body {
+        margin: 0 calc(1rem + 11.2vw);
+    }
+    .content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    #products {
+        margin-top: 2rem;
+        order: 10;
+    }
+    #form {
+        width: 470px;
+    }
+    #form h2 {
+        margin-top: 0;
+    }
 }
